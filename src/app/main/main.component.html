@@ -1,0 +1,40 @@
+<div class="container">
+    <header>
+        <h1>Test Electron Application!</h1>
+    </header>
+    <main>
+        <div style="width:30%">
+            <div class="app__actions">
+                <input
+                    type="text"
+                    [(ngModel)]="inputValue"
+                    placeholder="Enter text"
+                    class="app__actions__input">
+                <div class="app__actions__buttons">
+                    <button
+                        (click)="addItem()"
+                        class="app__actions__button app__actions__button-add"
+                        [disabled]="disabled">
+                        Add
+                    </button>
+                    <button (click)="removeAll()" class="app__actions__button app__actions__button-clear">Clear all</button>
+                </div>
+            </div>
+            <div class="app__content">
+                <ul *ngIf="list.length; else noItems">
+                    <li *ngFor="let listItem of list; index as i" class="app__content__listItem">
+                        <div class="app__content__listItem__text">
+                            <span class="app__content__listItem__text-number">{{i+1}}.</span>
+                            <span class="app__content__listItem__text-value">{{listItem}}</span>
+                        </div>
+                        <button (click)="removeItem(i)" class="app__content__listItem__btn">delete</button> 
+                    </li>
+                </ul>
+
+                <ng-template #noItems>
+                    <h2>Empty List</h2>
+                </ng-template>
+            </div>
+        </div>
+    </main>
+</div>

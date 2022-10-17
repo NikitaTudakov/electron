@@ -1,0 +1,110 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin:0;
+    text-align: center;
+}
+
+.container {
+    min-height: 100vh;
+    height: 100%;
+    background-color: #DFF6FF;
+}
+
+header {
+    padding: 20px ;
+    background-color: #5F9DF7;
+
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app {
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+
+        &__input {
+            font-size: 15px;
+            font-weight: 500;
+
+            margin-right: 30px;
+            border: none;
+            border-bottom: 2px solid black;
+            background-color: transparent;
+            outline: none;
+        }
+
+        &__button {
+            font-size: 15px;
+            font-weight: 500;
+            width:  85px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            color: #FAF7F0;
+
+
+            &-add {
+                background-color: #749F82;
+
+                margin-right: 15px;
+
+                &:disabled {
+                    background-color: #B2B2B2;
+                }
+            }
+
+            &-clear {
+                background-color: #DD5353;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 50%;
+        ul {
+            padding: 0;
+        }
+        &__listItem {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            &__text {
+                margin-right: 10px;
+
+                &-number {
+                    margin-right: 15px;
+                    font-weight: bold;
+                }
+
+                &-value {
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+            }
+
+            &__btn {
+                font-size: 15px;
+                font-weight: 500;
+                width:  85px;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+                color: #FAF7F0;
+                background-color: #DD5353;
+
+            }
+        }
+    }
+}
